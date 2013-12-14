@@ -2,3 +2,4 @@
 .meteor/*
 .build*
 jake.md
+*.sublime*
