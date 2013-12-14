@@ -9,8 +9,6 @@ Package.on_use(function (api) {
   var component_path = path.join('components');
   var components = ["panel"];
 
-  api.add_files(path.join('helpers', 'global.coffee'), 'client');
-
   for(var i=0; i < components.length; i++){
     api.add_files(path.join(component_path, components[i], 'interface.html'), 'client');
     api.add_files(path.join(component_path, components[i], 'example.html'), 'client');
