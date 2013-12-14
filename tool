@@ -18,7 +18,6 @@ case ${1} in
         # Create files
 
         touch components/${2}/${2}.js
-        touch components/${2}/${2}.less
         touch components/${2}/${2}.html
         # Fill files
         echo "<template name=\"${2}\">" >> components/${2}/${2}.html
