@@ -2,14 +2,14 @@
 
 <div class="panel {{panel_type}}">
   <div class="panel-heading">
-    {{#if bt_isTemplate heading}}
-     {{> heading}}
-    {{else}}
-      {{#if heading }}
-        {{heading}}
+    {{#if heading }}
+      {{#if bt_isTemplate heading}}
+       {{> heading}}
       {{else}}
-        {{#if title}}<span class="panel-title">{{title}}</span>{{/if}}
+        {{heading}}
       {{/if}}
+    {{else}}
+        {{#if title}}<span class="panel-title">{{title}}</span>{{/if}}
     {{/if}}
   </div>
   <div class="panel-body">
@@ -23,4 +23,5 @@
       {{footer}}
     {{/if}}
   </div>
+  {{/if}}
 </template>
