@@ -10,8 +10,9 @@ Package.on_use(function (api) {
   var components = ["panel"];
 
   for(var i=0; i < components.length; i++){
-    api.add_files(path.join(asset_path, components[i], components[i]+'.html'), 'client');
-    api.add_files(path.join(asset_path, components[i], components[i]+'.js'), 'client');
+    api.add_files(path.join(asset_path, components[i], 'logic.coffee'), 'client');
+    api.add_files(path.join(asset_path, components[i], 'interface.html'), 'client');
+    api.add_files(path.join(asset_path, components[i], 'example.html'), 'client');
   }
 
   api.add_files('demo.html', 'client');
