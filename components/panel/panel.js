@@ -1,7 +1,6 @@
-if(Meteor.is_client){
+if(Meteor.isClient){
   Template.bt_panel.helpers({
-
-    isTemplate: function () {
+    isTemplate: function (value) {
       //this is brittle
       return value[0] === ">";
     },
@@ -9,5 +8,4 @@ if(Meteor.is_client){
       return "panel-default";
     }
   });
-
 }

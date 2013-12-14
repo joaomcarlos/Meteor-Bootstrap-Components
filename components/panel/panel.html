@@ -1,33 +1,27 @@
 <template name="bt_panel">
 
-<div class="panel {{panel_type}}">
-  <div class="panel-heading">
-  	{{#if isTemplate heading}}
-	   {{> heading}}
-	  {{else}}
-	    {{#if heading }}
-        {{heading}}
-      {{else}}
-	      {{#if title}}<span class="panel-title">{{title}}</span>{{/if}}
+  <div class="panel {{panel_type}}">
+    <div class="panel-heading">
+      {{#if heading }}
+    	  {{#if isTemplate heading}}
+  	      {{> heading}}
+  	    {{else}}
+          {{heading}}
+        {{/if}}
       {{/if}}
-	  {{/if}}
-  </div>
-  <div class="panel-body">
-    {{> content}}
-  </div>
-  {{#if footer }}
-  <div class="panel-footer">
-    {{#if isTemplate footer}}
-     {{> footer}}
-    {{else}}
-      {{footer}}
+      {{#if title}}<span class="panel-title">{{title}}</span>{{/if}}
+    </div>
+    <div class="panel-body">
+      {{> content}}
+    </div>
+    {{#if footer }}
+    <div class="panel-footer">
+      {{#if isTemplate footer}}
+       {{> footer}}
+      {{else}}
+        {{footer}}
+      {{/if}}
+    </div>
     {{/if}}
   </div>
-  {{/if}}
-</div>
-
-</template>
-
-<template name="test">
-  <h1>test</h1>
 </template>
