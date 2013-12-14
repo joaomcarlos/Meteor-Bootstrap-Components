@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-components",
+  "description": "Provides bootstrap 3 UI components for the new Meteor UI.",
+  "homepage": "https://github.com/silentwarrior/Meteor-Bootstrap-Components",
+  "author": "João Carlos  (https://github.com/silentwarrior/)",
+  "version": "0.1.0",
+  "git": "https://github.com/silentwarrior/Meteor-Bootstrap-Components.git",
+  "packages": {
+    "bootstrap-3": {}
+  }
+}
