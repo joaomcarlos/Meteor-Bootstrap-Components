@@ -1,0 +1,29 @@
+<template name="bt_panel">
+
+<div class="panel {{panel_type}}">
+  <div class="panel-heading">
+  	{{#if isTemplate heading}}
+	   {{> heading}}
+	  {{else}}
+	    {{#if heading }}
+        {{heading}}
+      {{else}}
+	      {{#if title}}<span class="panel-title">{{title}}</span>{{/if}}
+      {{/if}}
+	  {{/if}}
+  </div>
+  <div class="panel-body">
+    {{> content}}
+  </div>
+  {{#if footer }}
+  <div class="panel-footer">
+    {{#if isTemplate footer}}
+     {{> footer}}
+    {{else}}
+      {{footer}}
+    {{/if}}
+  </div>
+  {{/if}}
+</div>
+
+</template>
