@@ -2,10 +2,10 @@
 # My adaptations of meteor-boilerplate
 # https://github.com/matteodem/meteor-boilerplate
 # Overall check
-if [ ! -d ".meteor" ]
-    then echo 'Please use the tool out of your project root (./tool)'
-    exit
-fi
+#if [ ! -d ".meteor" ]
+#    then echo 'Please use the tool out of your project root (./tool)'
+#    exit
+#fi
 
 case ${1} in
     new)
@@ -17,21 +17,40 @@ case ${1} in
 
         # Create files
 
-        touch components/${2}/${2}.js
-        touch components/${2}/${2}.html
+        touch components/${2}/logic.coffee
+        touch components/${2}/interface.html
+        touch components/${2}/example.html
         # Fill files
-        echo "<template name=\"${2}\">" >> components/${2}/${2}.html
-        echo "    <p>Template ${2}</p>" >> components/${2}/${2}.html
-        echo "</template>"              >> components/${2}/${2}.html
-        echo ""                         >> components/${2}/${2}.html
-        echo "Template.${2}.helpers({" >> components/${2}/${2}.js
-        echo ""                             >> components/${2}/${2}.js
-        echo "});"                          >> components/${2}/${2}.js
-        echo ""                             >> components/${2}/${2}.js
-        echo "Template.${2}.events({"  >> components/${2}/${2}.js
-        echo ""                             >> components/${2}/${2}.js
-        echo "});"                          >> components/${2}/${2}.js
-        echo ""                             >> components/${2}/${2}.js
+        echo "<template name=\"bt_${2}\">" >> components/${2}/interface.html
+        echo "    <p>Template {{name}}</p>" >> components/${2}/interface.html
+        echo "    <p>myProperty {{myProperty}}</p>" >> components/${2}/interface.html
+        echo "    <p>my content: {{> content}}</p>" >> components/${2}/interface.html
+        echo "</template>"              >> components/${2}/interface.html
+        echo ""                         >> components/${2}/interface.html
+
+        echo "<template name=\"bt_${2}_example\">" >> components/${2}/example.html
+        echo "  {{#bt_${2} myProperty=\"myValue\"}}" >> components/${2}/example.html
+        echo "      Example Content" >> components/${2}/example.html
+        echo "  {{/bt_${2}}}"              >> components/${2}/example.html
+        echo "</template>"              >> components/${2}/example.html
+        echo ""                         >> components/${2}/example.html
+
+
+        echo "Template.bt_${2}.helpers" >> components/${2}/logic.coffee
+        echo "  name: ->"                             >> components/${2}/logic.coffee
+        echo "      return \"bt_${2}\""                             >> components/${2}/logic.coffee
+        echo ""                          >> components/${2}/logic.coffee
+        echo ""                             >> components/${2}/logic.coffee
+        echo "Template.bt_${2}.events"  >> components/${2}/logic.coffee
+        echo "  # events: click, blur, keypress, keyup, keydown, etc"                             >> components/${2}/logic.coffee
+        echo "  'click div': (e) ->"                             >> components/${2}/logic.coffee
+        echo "      button = [\"left\",\"middle\",\"right\"][e.which-1]"                             >> components/${2}/logic.coffee
+        echo "      console.log \"template: [bt_alerts] -> event: [click:#{button}] -> selector: [div]\""                             >> components/${2}/logic.coffee
+        echo "      "                             >> components/${2}/logic.coffee
+        echo "      # Run this code when div is clicked"                             >> components/${2}/logic.coffee
+        echo "      "                             >> components/${2}/logic.coffee
+        echo ""                          >> components/${2}/logic.coffee
+        echo ""                             >> components/${2}/logic.coffee
         # Succesful
         echo "Successfully created a component called \"${2}\""
         ;;
