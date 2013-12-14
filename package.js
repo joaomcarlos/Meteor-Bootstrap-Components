@@ -6,18 +6,18 @@ Package.on_use(function (api) {
   api.use(['jquery', 'bootstrap-3', 'templating'], 'client');
 
   var path = Npm.require('path');
-  var asset_path = path.join('components');
+  var component_path = path.join('components');
   var components = ["panel"];
 
-  api.add_files(path.join(asset_path, 'helpers', 'global.coffee'), 'client');
-  
+  api.add_files(path.join(component_path, 'helpers', 'global.coffee'), 'client');
+
   for(var i=0; i < components.length; i++){
-    api.add_files(path.join(asset_path, components[i], 'interface.html'), 'client');
-    api.add_files(path.join(asset_path, components[i], 'example.html'), 'client');
-    api.add_files(path.join(asset_path, components[i], 'logic.coffee'), 'client');
+    api.add_files(path.join(component_path, components[i], 'interface.html'), 'client');
+    api.add_files(path.join(component_path, components[i], 'example.html'), 'client');
+    api.add_files(path.join(component_path, components[i], 'logic.coffee'), 'client');
   }
 
-  api.add_files(path.join(asset_path, 'helpers', 'tester.html'), 'client');
+  api.add_files(path.join('helpers', 'tester.html'), 'client');
   api.add_files('demo.html', 'client');
 
 });
