@@ -36,19 +36,20 @@ case ${1} in
         echo ""                         >> components/${2}/example.html
 
 
-        echo "Template.bt_${2}.helpers" >> components/${2}/logic.coffee
-        echo "  name: ->"                             >> components/${2}/logic.coffee
-        echo "      return \"bt_${2}\""                             >> components/${2}/logic.coffee
+        echo "if Meteor.isClient" >> components/${2}/logic.coffee
+        echo "  Template.bt_${2}.helpers" >> components/${2}/logic.coffee
+        echo "      name: ->"                             >> components/${2}/logic.coffee
+        echo "          return \"bt_${2}\""                             >> components/${2}/logic.coffee
         echo ""                          >> components/${2}/logic.coffee
         echo ""                             >> components/${2}/logic.coffee
-        echo "Template.bt_${2}.events"  >> components/${2}/logic.coffee
-        echo "  # events: click, blur, keypress, keyup, keydown, etc"                             >> components/${2}/logic.coffee
-        echo "  'click div': (e) ->"                             >> components/${2}/logic.coffee
-        echo "      button = [\"left\",\"middle\",\"right\"][e.which-1]"                             >> components/${2}/logic.coffee
-        echo "      console.log \"template: [bt_alerts] -> event : [click :#{button}] -> selector: [div]\""                             >> components/${2}/logic.coffee
-        echo "      "                             >> components/${2}/logic.coffee
-        echo "      # Run this code when div is clicked"                             >> components/${2}/logic.coffee
-        echo "      "                             >> components/${2}/logic.coffee
+        echo "  Template.bt_${2}.events"  >> components/${2}/logic.coffee
+        echo "      # events: click, blur, keypress, keyup, keydown, etc"                             >> components/${2}/logic.coffee
+        echo "      'click div': (e) ->"                             >> components/${2}/logic.coffee
+        echo "          button = [\"left\",\"middle\",\"right\"][e.which-1]"                             >> components/${2}/logic.coffee
+        echo "          console.log \"template: [bt_alerts] -> event : [click :#{button}] -> selector: [div]\""                             >> components/${2}/logic.coffee
+        echo "          "                             >> components/${2}/logic.coffee
+        echo "          # Run this code when div is clicked"                             >> components/${2}/logic.coffee
+        echo "          "                             >> components/${2}/logic.coffee
         echo ""                          >> components/${2}/logic.coffee
         echo ""                             >> components/${2}/logic.coffee
         # Succesful
