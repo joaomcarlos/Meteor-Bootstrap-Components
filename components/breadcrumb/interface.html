@@ -1,0 +1,24 @@
+<template name="bt_breadcrumb">
+    <ol class="breadcrumb">
+	  {{> content}}
+	</ol>
+</template>
+  
+<template name="bt_crumb">
+	<li>
+	{{#if href}}
+		{{#if active}}
+			<a href="{{href}}" class="active">{{> content}}</a>
+		{{else}}
+			<a href="{{href}}">{{> content}}</a>
+		{{/if}}
+	{{else}}
+		{{#if active}}
+			<span class="active">{{> content}}</span>
+		{{else}}
+			{{> content}}
+		{{/if}}
+	{{/if}}
+    </li>
+</template>
+
