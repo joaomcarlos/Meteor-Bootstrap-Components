@@ -62,11 +62,7 @@ case ${1} in
             echo ""
         fi
         echo "List of possible operations: "
-        echo -e "create:view       - Create a view folder under /client/views with html, js and less files in it"
-        echo -e "create:common     - Create a html template file under /client/views/common"
-        echo -e "create:route      - Create a route javascript file under /client/routes"
-        echo -e "create:model      - Create a model which sets up basic javascript files under model, client/subscriptions and server/publications"
-        echo -e "create:module     - Create a module, such as a searchbar, form etc."
+        echo -e "new        - Create a component @ /components with html and coffeescript boilerplate"
         echo ""
         ;;
 esac
