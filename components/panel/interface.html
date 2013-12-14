@@ -1,10 +1,11 @@
 <template name="bt_panel">
 
 <div class="panel panel-{{type}}">
-  <div class="panel-heading">
+  {{#if accordion}}
+    <div class="panel-heading accordion-clicker">
     {{#if heading }}
       {{#if bt_isTemplate heading}}
-       {{> template_name heading}}
+       {{template_name heading}}
       {{else}}
         {{heading}}
       {{/if}}
@@ -12,17 +13,52 @@
         {{#if title}}<span class="panel-title">{{title}}</span>{{/if}}
     {{/if}}
   </div>
-  <div class="panel-body">
-    {{> content}}
-  </div>
-  {{#if footer }}
-  <div class="panel-footer">
-    {{#if bt_isTemplate footer}}
-     {{> footer}}
-    {{else}}
-      {{footer}}
+  <div class="panel-collapse collapse in">
+    <div class="panel-body">
+      {{clearAccordionFlag}}
+      {{> content}}
+    </div>
+    {{#if footer }}
+    <div class="panel-footer">
+      {{#if bt_isTemplate footer}}
+       {{> footer}}
+      {{else}}
+        {{footer}}
+      {{/if}}
+    </div>
     {{/if}}
   </div>
+  {{else}}
+      <div class="panel-heading">
+      {{#if heading }}
+        {{#if bt_isTemplate heading}}
+         {{template_name heading}}
+        {{else}}
+          {{heading}}
+        {{/if}}
+      {{else}}
+          {{#if title}}<span class="panel-title">{{title}}</span>{{/if}}
+      {{/if}}
+    </div>
+    <div class="panel-body">
+      {{> content}}
+    </div>
+    {{#if footer }}
+    <div class="panel-footer">
+      {{#if bt_isTemplate footer}}
+       {{> footer}}
+      {{else}}
+        {{footer}}
+      {{/if}}
+    </div>
+    {{/if}}
   {{/if}}
 </div>
 </template>
+
+
+
+
+
+
+
