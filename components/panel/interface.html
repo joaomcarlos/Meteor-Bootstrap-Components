@@ -1,0 +1,51 @@
+<template name="bt_panel">
+
+<<<<<<< HEAD:components/panel/panel.html
+  <div class="panel {{panel_type}}">
+    <div class="panel-heading">
+      {{#if heading }}
+    	  {{#if isTemplate heading}}
+  	      {{> heading}}
+  	    {{else}}
+          {{heading}}
+        {{/if}}
+      {{/if}}
+      {{#if title}}<span class="panel-title">{{title}}</span>{{/if}}
+    </div>
+    <div class="panel-body">
+      {{> content}}
+    </div>
+    {{#if footer }}
+    <div class="panel-footer">
+      {{#if isTemplate footer}}
+       {{> footer}}
+      {{else}}
+        {{footer}}
+      {{/if}}
+    </div>
+=======
+<div class="panel {{panel_type}}">
+  <div class="panel-heading">
+    {{#if bt_isTemplate heading}}
+     {{> heading}}
+    {{else}}
+      {{#if heading }}
+        {{heading}}
+      {{else}}
+        {{#if title}}<span class="panel-title">{{title}}</span>{{/if}}
+      {{/if}}
+    {{/if}}
+  </div>
+  <div class="panel-body">
+    {{> content}}
+  </div>
+  {{#if footer }}
+  <div class="panel-footer">
+    {{#if bt_isTemplate footer}}
+     {{> footer}}
+    {{else}}
+      {{footer}}
+>>>>>>> original/master:components/panel/interface.html
+    {{/if}}
+  </div>
+</template>
