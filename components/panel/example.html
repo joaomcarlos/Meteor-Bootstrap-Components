@@ -1,9 +1,9 @@
 <template name="bt_panel_example">
 	<h1>Panels</h1>
-  {{#bt_panel title="Example Panels - Accordion" type="primary" accordion=true}}
-    {{#bt_panel title="New Panel" type="default" accordion=true}}
+  {{#bt_panel_accordion title="Example Panels - Accordion" type="primary"}}
+    {{#bt_panel_accordion title="New Panel" type="default"}}
       Hello to my new panel
-    {{/bt_panel}}
+    {{/bt_panel_accordion}}
     {{#bt_panel title="New Panel - Accordion" type="primary"}}
       Hello to my new panel
     {{/bt_panel}}
@@ -23,7 +23,7 @@
     {{#bt_panel title=">btpanelheadertester" type="default"}}
       This panel has custom html title
     {{/bt_panel}}
-  {{/bt_panel}}
+  {{/bt_panel_accordion}}
 </template>
 
 <template name="btpanelheadertester">
