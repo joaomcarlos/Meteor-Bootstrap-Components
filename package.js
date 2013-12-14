@@ -7,7 +7,7 @@ Package.on_use(function (api) {
 
   var path = Npm.require('path');
   var component_path = path.join('components');
-  var components = ["panel", "alerts", "label", "glyphicon"];
+  var components = ["panel", "alert", "label", "glyphicon"];
 
   for(var i=0; i < components.length; i++){
     api.add_files(path.join(component_path, components[i], 'interface.html'), 'client');
