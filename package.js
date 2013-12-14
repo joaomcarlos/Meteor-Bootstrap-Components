@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.use(['jquery', 'bootstrap-3', 'coffeescript'], 'client');
+  api.use(['jquery', 'bootstrap-3', 'templating','coffeescript'], 'client');
 
   var path = Npm.require('path');
   var asset_path = path.join('components');
