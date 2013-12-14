@@ -1,4 +1,5 @@
 if Meteor.isClient
   Template.bt_panel.helpers
-    panel_type: ->
-      "panel-default"
+    class: ->
+      # this doesn't work for some reason, 
+      "default"
