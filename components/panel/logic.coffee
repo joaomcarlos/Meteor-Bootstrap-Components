@@ -3,4 +3,4 @@ if Meteor.isClient
     template_name: (tname) ->
     	tname = tname.substring(1,tname.length-1)
     	console.log tname
-    	return Template[tname]; 
+    	return Template[tname]
