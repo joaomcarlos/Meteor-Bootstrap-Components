@@ -14,4 +14,6 @@ Package.on_use(function (api) {
     api.add_files(path.join(asset_path, components[i], components[i]+'.js'), 'client');
   }
 
+  api.add_files('demo.html', 'client');
+
 });
