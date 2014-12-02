@@ -1,0 +1,5 @@
+.meteor
+.meteor/*
+.build*
+jake.md
+*.sublime*
