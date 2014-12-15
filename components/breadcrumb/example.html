@@ -1,0 +1,14 @@
+<template name="bt_breadcrumb_example">
+  
+  {{#bt_breadcrumb}}
+  	<li>Item</li>
+  	<li><a href="#">Item2</a></li>
+  {{/bt_breadcrumb}}
+
+  {{#bt_breadcrumb}}
+    {{#bt_crumb href="#"}}Users{{/bt_crumb}}
+    {{#bt_crumb href="#"}}SilentWarrior{{/bt_crumb}}
+    {{#bt_crumb active="true"}}logic.coffee{{/bt_crumb}}
+  {{/bt_breadcrumb}}
+</template>
+
